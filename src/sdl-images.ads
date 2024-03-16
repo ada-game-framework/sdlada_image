@@ -17,7 +17,8 @@ package SDL.Images is
 
    Image_Error : exception;
 
-   type Init_Image_Flags is new SDL.Init_Flags;
+   type Init_Image_Flags is mod 2 ** 32 with
+     Convention => C;
 
    Enable_JPG        : constant Init_Image_Flags := 16#0000_0001#;
    Enable_PNG        : constant Init_Image_Flags := 16#0000_0002#;
