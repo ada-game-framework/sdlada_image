@@ -7,7 +7,7 @@ package body SDL.Images is
    use type C.char_array;
 
    Format_Strings : constant Format_String_Arrays :=
-     ["AVIF" & C.char'Val (0),
+     ("AVIF" & C.char'Val (0),
       "BMP"  & C.char'Val (0) & C.char'Val (0),
       "CUR"  & C.char'Val (0) & C.char'Val (0),
       "ICO"  & C.char'Val (0) & C.char'Val (0),
@@ -25,7 +25,7 @@ package body SDL.Images is
       "XCF"  & C.char'Val (0) & C.char'Val (0),
       "XPM"  & C.char'Val (0) & C.char'Val (0),
       "XV"   & C.char'Val (0) & C.char'Val (0) & C.char'Val (0),
-      "WEBP" & C.char'Val (0)];
+      "WEBP" & C.char'Val (0));
 
 
    function Initialise (Flags : in Init_Image_Flags := Enable_Everything) return Boolean is
